@@ -6,14 +6,18 @@ public class Game {
 	private ArrayList<Card> deck = new ArrayList<>();
 	private ArrayList<Card> playerHand = new ArrayList<>();
 	private ArrayList<Card> computerHand = new ArrayList<>();
-
-    private Card lastPlayerCard;
-    private Card lastComputerCard;
+    private Card lastPlayerCard = null;
+    private Card lastComputerCard = null;
     
     public void startGame() {
+    	// First Initialize Decks for both player and computer
         initializeDeck();
         shuffleDeck();
         initializeHands();
+        
+        // Initialize the hands for both player and computer
+        //lastPlayerCard = playerHand.remove(0);
+        //lastComputerCard = computerHand.remove(0);
     }
     
 	public void initializeDeck() {
@@ -81,7 +85,7 @@ public class Game {
         state.lastComputerCard = this.lastComputerCard;
         return state;
     }
-	
+    
     public Card getLastPlayerCard() {
         return lastPlayerCard;
     }

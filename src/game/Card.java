@@ -3,7 +3,6 @@ import java.io.Serializable;
 
 public class Card implements Serializable {
     private static final long serialVersionUID = 1L;
-    
 	private String value;
     private String suit;
 
@@ -13,7 +12,7 @@ public class Card implements Serializable {
     }
     
     public String getImagePath() {
-        return "src/cards/" + toString() + ".png";  // e.g., "10-H.png"
+        return "/cards/" + toString() + ".png";  // e.g., "10-H.png"
     }
     
     @Override
